@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Mono.js test!</title>
-</head>
 <body>
     <script type="module">
-        import { h1 } from './index.js'
-        h1.textContent = 'Hello, Mono.js!'
+        import header1, { paragraph, title, link, css, wait, font } from './index.js'
+        document.body.appendChild(css("body { background-color: slategray; font-family: Arial, sans-serif; }"));
+        document.body.appendChild(header1("hello"));
+        await wait(3);
+        document.body.appendChild(font('Atkinson+Hyperlegible+Mono'))
+        document.body.appendChild(css("body { background-color: slategray; font-family: 'Atkinson Hyperlegible Mono', sans-serif; }"));
+        document.body.appendChild(paragraph("This is a test website made in Mono.JS! As you can see, it is a dynamic website that uses HTML elements! Just like it changed its font when you waited 3 seconds!"));
     </script>
 </body>
 </html>
