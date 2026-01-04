@@ -43,3 +43,9 @@ export function wait(seconds) {
 export function font(name) {
     return css(`@import url('https://fonts.googleapis.com/css2?family=${name}');`);
 }
+export function onclick(fn, element) {
+    // connect to a element
+    element.addEventListener('click', fn);
+    // add user specified function inside
+    
+}
