@@ -55,5 +55,5 @@ console.log('2 seconds have passed');
 ## Installation
 
 ```js
-import header1, { paragraph, title, link, css, font, wait } from './index.js';
+import header1, { paragraph, title, link, css, font, wait } from 'https://eotter-beep.github.io/monojs/index.js';
 ```
