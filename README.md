@@ -1,6 +1,6 @@
 # mono.js
 
-A lightweight DOM and utility library for creating HTML elements and styling dynamically.
+A lightweight DOM and utility library for simplifying JavaScript web development
 
 ## Functions
 
