@@ -2,13 +2,22 @@
 <html>
 <body>
     <script type="module">
-        import header1, { paragraph, title, link, css, wait, font } from './index.js'
+        import header1, { paragraph, title, link, css, wait, font, onclick } from './index.js'
         document.body.appendChild(css("body { background-color: slategray; font-family: Arial, sans-serif; }"));
         document.body.appendChild(header1("hello"));
         await wait(3);
         document.body.appendChild(font('Atkinson+Hyperlegible+Mono'))
         document.body.appendChild(css("body { background-color: slategray; font-family: 'Atkinson Hyperlegible Mono', sans-serif; }"));
-        document.body.appendChild(paragraph("This is a test website made in Mono.JS! As you can see, it is a dynamic website that uses HTML elements! Just like it changed its font when you waited 3 seconds!"));
-    </script>
+        const p = paragraph("This is a test website made in Mono.JS! As you can see, it is a dynamic website that uses HTML elements! Just like it changed its font when you waited 3 seconds!");
+
+        // Append it to the body
+        document.body.appendChild(p);
+
+        // Attach onclick directly to this paragraph
+        onclick(() => {
+            alert("You clicked the paragraph!");
+            console.log("Paragraph clicked!");
+        }, p);
+        </script>
 </body>
 </html>

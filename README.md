@@ -52,8 +52,18 @@ await wait(2);
 console.log('2 seconds have passed');
 ```
 
+### `onclick(callback, element)`
+Attaches an onclick event listener to the given element.
+```js
+const button = paragraph('Click me');
+document.body.appendChild(button);
+onclick(() => {
+    alert('Button clicked!');
+}, button);
+```
+
 ## Installation
 
 ```js
-import header1, { paragraph, title, link, css, font, wait } from 'https://eotter-beep.github.io/monojs/index.js';
+import { header1, paragraph, title, link, css, font, wait, onclick } from 'https://eotter-beep.github.io/monojs/index.js';
 ```
